@@ -1,0 +1,31 @@
+/* Full width text styles */
+#full-width-text-container {
+    background: rgba(248,95,72,255);
+}
+
+#full-width-text-content {
+    padding: 10vw 8vw;
+}
+
+#full-width-text-content p{
+    font-size: 4.5vw;
+}
+
+/* Tablets in landscape mode and small desktops */
+@media (max-width: 1024px) {
+    #full-width-text-content p{
+        font-size: 5.5vw;
+    }
+}
+
+/* Large phones and tablets in portrait mode */
+@media (max-width: 768px) {
+    #full-width-text-content p{
+        font-size: 6.5vw;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+}

@@ -1,0 +1,302 @@
+/* Content plus image styles */
+.active-element {
+    display: flex !important;
+}
+
+.deactive-element {
+    display: none !important;
+}
+
+#content-plus-image-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#content-plus-image-container h3 {
+    font-size: 1.5vw;
+    letter-spacing: 4px;
+}
+
+#text-plus-image-container, 
+#slider-plus-image-container {
+    display: flex;
+    height: 50vw;
+}
+
+.image-container img{
+    width: 50vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+.text-container{
+    max-height: 100%;
+    background: rgba(129,215,218,255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7vw;
+}
+
+.text-container h1{
+    font-size: 1.6vw;
+}
+
+/* Slider container and elements styles */
+.slider-container {
+    max-height: 100%;
+    max-width: 50vw;
+    background: rgba(57,160,238,255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7vw 7vw 5vw 7vw;
+}
+
+.slider-container i {
+    margin: 2vw 0rem;
+    color: white;
+    font-size: 2rem;
+}
+
+#boron-studio h1{
+    font-size: 3.5vw;
+}
+
+#boron-studio p{
+    font-size: 1.5vw;
+    color: white;
+}
+
+#prev-next-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+}
+
+#prev-next-buttons i{
+    font-size: 3vw;
+    color: black;
+    cursor: pointer;
+}
+
+#prev-next-buttons i:active{
+    color: rgba(0, 0, 0, 0.295);
+}
+
+/* Slides styles and animation */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+}
+
+.slide-white-text {
+    font-size: 1.6vw;
+    font-weight: 600;
+    color: white;
+}
+
+.slide-black-text {
+    font-size: 1.6vw;
+    font-weight: 600;
+    color: black;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes slideInRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.slide.active {
+    max-width: 33.33%;
+    white-space: normal;
+    display: block;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.deactive {
+    display: none;
+}
+
+.fadeOut {
+    animation: fadeOut 0.5s forwards;
+}
+
+.slideInRight {
+    animation: slideInRight 0.5s forwards;
+}
+
+.slideInLeft {
+    animation: slideInLeft 0.5s forwards;
+}
+
+.slide i{
+    margin: 0 !important;
+    font-size: 2vw !important;
+}
+
+/* Tablets in landscape mode and small desktops */
+@media (max-width: 1024px) {
+    .text-container h1{
+        font-size: 1.6vw;
+    }
+
+    .text-container h3{
+        font-size: 1.4vw;
+    }
+
+    .slider-container h3{
+        font-size: 1.4vw;
+    }
+    
+    .slide-white-text i {
+        margin: 1rem 0rem 0rem 0rem;
+        color: white;
+        font-size: 2rem;
+    }
+
+    #prev-next-buttons i{
+        font-size: 2rem;
+        color: black;
+        cursor: pointer;
+    }
+
+    .slide-white-text {
+        font-size: 1.5vw;
+        font-weight: 600;
+        color: white;
+    }
+    
+    .slide-black-text {
+        font-size: 1.5vw;
+        font-weight: 600;
+        color: black;
+    }
+
+    .slide i{
+        font-size: 12rem;
+    }
+    
+}
+
+/* Large phones and tablets in portrait mode */
+@media (max-width: 768px) {
+    #content-plus-image-container h3 {
+        font-size: 3.5vw;
+        letter-spacing: 4px;
+    }
+    
+    #text-plus-image-container,
+    #slider-plus-image-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    #slider-plus-image-container .slider-container {
+        order: 1;
+    }
+    
+    #slider-plus-image-container .image-container {
+        order: 2;
+    }
+
+    .image-container img{
+        display: block;
+        width: 100vw;
+        min-height: 100vw;
+    }
+    
+    .text-container{
+        padding: 15vw 7vw;
+        min-height: 100vw;
+        box-sizing: border-box;
+    }
+
+    .text-container h1{
+        font-size: 4.8vw;
+    }
+    
+    .slider-container {
+        min-height: 100vw;
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .slider-container i {
+        margin: 2vw 0rem;
+        color: white;
+        font-size: 5vw;
+    }
+    
+    #boron-studio h1{
+        font-size: 8vw;
+    }
+    
+    #boron-studio p{
+        font-size: 3.5vw;
+        color: white;
+    }
+    
+    .slide-white-text {
+        font-size: 5vw;
+        font-weight: 600;
+        color: white;
+    }
+    
+    .slide-black-text {
+        font-size: 5vw;
+        font-weight: 600;
+        color: black;
+    }
+
+    .slide i{
+        margin: 0 !important;
+        font-size: 5vw !important;
+    }
+
+    #slider-indicator {
+        display: flex;
+        justify-content: center;
+        height: 15%;
+        width: 100%;
+    }
+
+    #slider-points {
+        display: flex;
+        justify-content: space-between;
+        width: 15%;
+    }
+
+    #slider-points i{
+        font-size: 0.5rem;
+    }
+
+    .active-indicator {
+        color: black !important;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+}

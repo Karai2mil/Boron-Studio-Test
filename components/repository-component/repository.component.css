@@ -1,0 +1,142 @@
+/* Repository styles */
+#repository-container {
+    padding: 9rem 9rem;
+}
+
+#repository-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding-bottom: 2vw;
+    border-bottom: 0.1vw solid;
+}
+
+#repository-header h1 {
+    font-size: 5vw;
+}
+
+#repository-header p {
+    width: 18vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+
+.repository-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 3vw;
+    border-bottom: 0.1vw solid;
+}
+
+.repository-elements p{
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+.repository-elements i{
+    padding: 1rem;
+    font-size: 3.5vw;
+    font-weight: 600;
+}
+
+.hover-container {
+    position: relative;
+}
+
+.hover-container i:hover{
+    padding: 1rem;
+    background-color: black;
+    border-radius: 100%;
+    color: white;
+}
+  
+.hover-container::before {
+    content: "";
+    position: absolute;
+    left: -25vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18vw;
+    height: 18vw;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.hover-container:hover::before {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.author-image::before {
+    background-image: url("../../assets/images/author.jpg");
+}
+
+.title-image::before {
+    background-image: url("../../assets/images/title.jpg");
+}
+.lines-image::before {
+    background-image: url("../../assets/images/navegation-lines.jpeg");
+}
+.description-image::before {
+    background-image: url("../../assets/images/descriptions.jpg");
+}
+
+/* Tablets in landscape mode and small desktops */
+@media (max-width: 1024px) {
+    #repository-container {
+        padding: 9vw;
+    }
+    
+    #repository-header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 8vw;
+    }
+    
+    #repository-header h1 {
+        font-size: 8vw;
+    }
+
+    #repository-header p {
+        width: 60vw;
+        font-size: 4vw;
+        margin: 0;
+    }
+
+    .repository-elements p{
+        font-size: 5vw;
+    }
+
+    .repository-elements i{
+        font-size: 5vw;
+    }
+
+    .hover-container::before {
+        left: -35vw;
+        width: 25vw;
+        height: 25vw;
+    }
+}
+
+/* Large phones and tablets in portrait mode */
+@media (max-width: 768px) {
+    #repository-header h1 {
+        font-size: 10vw;
+    }
+
+    #repository-header p {
+        width: 70vw;
+        font-size: 5vw;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    
+}

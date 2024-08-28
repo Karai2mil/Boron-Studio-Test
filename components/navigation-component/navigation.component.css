@@ -1,0 +1,360 @@
+/* Navigation styles */
+#navigation-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-transition {
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.active-nav {
+    opacity: 1;
+    display: block;
+}
+
+.deactive-nav {
+    opacity: 0;
+    transform: translateY(-100px);
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 2rem 4vw;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+}
+
+#nav-expanded-logo {
+    width: 15vw;
+    height: auto;
+}
+
+#nav-collapsed-logo {
+    width: 4rem;
+}
+
+#nav-collapsed-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 4.5rem;
+    color: white;
+    font-size: 1em;
+    background-color: black;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: box-shadow 0.01s ease, box-shadow 0.3s ease;
+}
+
+#nav-collapsed-menu:active {
+    box-shadow: 0 0 2rem black;
+}
+
+.navbar ul {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.navbar ul li i{
+    font-size: 1.8vw;
+    cursor: pointer;
+}
+
+#menu-options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: opacity 1s ease, transform 1s ease;
+    background-color: black;
+    color: white;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 50%;
+    padding: 5rem 6rem;
+    box-sizing: border-box;
+}
+
+.nav-menu-open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-menu-closed {
+    opacity: 0;
+    transform: translateX(1000px);
+}
+
+#close-menu {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 5%;
+}
+
+#close-menu-button{
+    width: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#close-menu img{
+    visibility: hidden;
+}
+
+#close-menu-button i{
+    font-size: 1.4rem;
+}
+
+#close-menu-button p{
+    font-size: 1.1rem;
+}
+
+#menu-links {
+    width: 100%;
+    height: 75%;
+    padding: 2rem 0;
+}
+
+#menu-links ul {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu-links ul li {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+#menu-links ul li i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#lenguage-and-search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu-contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+}
+
+#menu-subscribe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    background: rgba(129,215,218,255);
+    padding: 1.5rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: black;
+}
+
+#menu-contact-container i{
+    color: rgba(129,215,218,255);
+    font-size: 2rem;
+}
+
+#menu-subscribe-container i{
+    color: black;
+    font-size: 1.5rem;
+}
+
+#menu-contacts-container {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+#gmail-contact {
+    display: none;
+}
+
+
+/* Tablets in landscape mode and small desktops */
+@media (max-width: 1024px) {
+    #nav-collapsed-logo {
+        width: 3rem;
+    }
+    
+    .navbar ul {
+        width: 70%;
+    }
+    
+    .navbar ul li {
+        font-size: 0.9rem;
+    }
+    
+    .navbar ul li i{
+        font-size: 1.5rem;
+    }
+
+    #menu-options-container {
+        width: 60%;
+        padding: 5rem 4rem;
+    }
+
+    #close-menu-button{
+        width: 4.5rem;
+    }
+    
+    #close-menu-button i{
+        font-size: 1.3rem;
+    }
+    
+    #close-menu-button p{
+        font-size: 1rem;
+    }
+
+    #menu-links {
+        height: 70%;
+    }
+    
+    
+    #menu-links ul li {
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    
+    #menu-links ul li i{
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    #menu-subscribe-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #menu-contact-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 20%;
+    }
+
+    #gmail-contact {
+        display: block;
+    }
+
+    #menu-contacts-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* Large phones and tablets in portrait mode */
+@media (max-width: 768px) {
+    .navbar{
+        padding: 2rem 5vw;
+    }
+
+    #nav-collapsed-logo {
+        width: 2rem;
+    }
+
+    #nav-collapsed-menu {
+        width: 3.5rem;
+        font-size: 0.9rem;
+        padding: 0.8rem 1.8rem;
+        border-radius: 2rem;
+    }
+
+    #nav-collapsed-menu i{
+        font-size: 0.7rem;
+    }
+
+    #close-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 5%;
+    }
+
+    #close-menu img{
+        visibility: visible;
+        width: 10rem;
+        height: auto;
+    }
+
+    #menu-options-container {
+        width: 100%;
+        padding: 4rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .navbar{
+        padding: 2rem 7vw;
+    }
+
+    #nav-collapsed-logo {
+        width: 2rem;
+    }
+
+    #nav-collapsed-menu {
+        width: 3rem;
+        font-size: 0.8rem;
+        padding: 0.6rem 1.5rem;
+        border-radius: 2rem;
+    }
+
+    #nav-collapsed-menu i{
+        font-size: 0.5rem;
+    }
+
+    #menu-options-container {
+        padding: 3rem 2rem;
+    }
+
+    #lenguage-and-search {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }    
+
+    #menu-links {
+        width: 100%;
+        height: 65%;
+        padding: 0;
+    }
+}

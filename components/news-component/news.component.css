@@ -1,0 +1,151 @@
+/* News styles */
+.news-title{
+    display: flex;
+    justify-content: center;
+    font-size: 9vw;
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+
+.news-elements-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-pair {
+    display: flex;
+    justify-content: space-between;
+    width: 49.9%;
+}
+
+.news-element {
+    width: 49.8%;
+}
+
+.news-element h1 {
+    font-size: 1.55vw;
+}
+
+.news-element h2 {
+    font-size: 1.55vw;
+}
+
+.news-element-image {
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.news-element-color {
+    max-width: 100%;
+    min-height: 23vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4vw 3vw 5vw 3vw;
+
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 1s ease;
+}
+
+.news-element-image:hover .news-element-color{
+    transition: clip-path 1s ease;
+    clip-path: polygon(0 50%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.element-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.element-title i {
+    font-size: 2.5vw;
+}
+
+.webinar-image {
+    background-image: url("../../assets/images/webinar.jpeg");
+}
+
+.webinar-color {
+    background-color: rgba(81,181,221,255);
+}
+
+.presentation-image {
+    background-image: url("../../assets/images/presentation.jpeg");
+}
+
+.presentation-color {
+    background-color: rgba(129,215,218,255);
+}
+
+.event-image {
+    background-image: url("../../assets/images/event.jpeg");
+}
+
+.event-color {
+    background-color: rgba(87,209,160,255);
+}
+
+.publication-image {
+    background-image: url("../../assets/images/publication.jpeg");
+}
+
+.publication-color {
+    background-color: rgba(251,218,84,255);
+}
+
+/* Tablets in landscape mode and small desktops */
+@media (max-width: 1024px) {
+
+}
+
+/* Large phones and tablets in portrait mode */
+@media (max-width: 768px) {
+    .news-elements-container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .news-title{
+        font-size: 12vw;
+    }
+
+    .news-pair {
+        width: 100%;
+        margin-top: 0.4%;
+    }
+
+    .news-element-color {
+        max-width: 100%;
+        min-height: 50vw;
+    }
+
+    .news-element {
+        width: 49.8%;
+    }    
+    
+    .news-element h1 {
+        font-size: 3.6vw;
+    }
+    
+    .news-element h2 {
+        font-size: 3vw;
+    }
+
+    .news-element-color {
+        padding: 7vw 5vw 12vw 5vw;
+    }
+
+    .element-title i {
+        font-size: 4vw;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+}

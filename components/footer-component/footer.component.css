@@ -1,0 +1,286 @@
+/* Footer styles */
+.footer-container {
+    background: black;
+}
+
+#footer-content {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    padding: 6vw 9vw 1vw 9vw;
+    color: white;
+}
+
+#footer-subscription-content {
+    width: 80%;
+}
+
+#inside-logo{
+    width: 15vw;
+    height: auto;
+}   
+
+#footer-subscription-content h1{
+    width: 22vw;
+    font-size: 2vw;
+    padding: 3.5vw 0 1.5vw 0;
+}
+
+#contact-container {
+    display: flex;
+    align-items: center;
+}
+
+#subscribe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    background: rgba(129,215,218,255);
+    padding: 1vw 1.8vw;
+    font-size: 0.9vw;
+    font-weight: 700;
+    color: black;
+}
+
+#subscribe-container i{
+    font-size: 1.6vw;
+}
+
+#contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding: 0 5vw;
+}
+
+#contacts i{
+    color: rgba(129,215,218,255);
+    font-size: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+#contacts span{
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+#footer-links-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 3.5vw;
+}
+.copyright p{
+    font-size: 1vw;
+    color: grey;
+}
+
+/* Tablets in landscape mode and small desktops */
+@media (max-width: 1024px) {
+    #inside-logo{
+        width: 18vw;
+    }   
+    
+    #footer-subscription-content h1{
+        width: 25vw;
+        font-size: 2.5vw;
+        padding: 3.5vw 0 1.5vw 0;
+    }
+
+    #subscribe-container {
+        width: 50%;
+        padding: 1.6vw 2.4vw;
+        font-size: 1.2vw;
+    }
+    
+    #subscribe-container i{
+        font-size: 1.6vw;
+    }
+
+    #contacts {
+        padding: 0 3vw;
+    }
+    
+    #contacts i{
+        font-size: 3vw;
+        margin-right: 2vw;
+    }
+    
+    #contacts span{
+        font-size: 1.5vw;
+    }
+
+    #footer-links-content {
+        font-size: 1.4vw;
+    }
+
+    .copyright{
+        padding: 2vw 4vw;
+    }
+
+    .copyright p{
+        font-size: 1.3vw;
+        color: grey;
+    }
+}
+
+/* Large phones and tablets in portrait mode */
+@media (max-width: 768px) {
+    #footer-content {
+        padding: 10vw 9vw 1vw 9vw;
+    }
+
+    #outside-logo {
+        width: 40vw;
+    }
+
+    #footer-content {
+        flex-direction: column;
+    }
+
+    #footer-content #footer-subscription-content {
+        order: 1;
+    }
+
+    #footer-subscription-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #footer-subscription-content h1{
+        width: 100%;
+        font-size: 7vw;
+        padding: 0 0 1.5vw 0;
+    }
+
+    #contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #subscribe-container {
+        width: 100%;
+        padding: 3vw 5vw;
+        font-size: 2vw;
+        box-sizing: border-box;
+    }
+    
+    #subscribe-container i{
+        font-size: 3vw;
+    }
+
+    #contacts {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 4vw 0;
+    }
+    
+    #contacts i{
+        font-size: 5vw;
+        margin-right: 0;
+        margin-left: 4vw;
+    }
+    
+    #contacts span{
+        font-size: 2.5vw;
+    }
+
+    #footer-links-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 3vw;
+        padding: 8vw 0 4vw 0;
+        width: 100%;
+    }
+    
+    #footer-links-content p {
+        width: 45%;
+        margin-bottom: 4vw;
+    }
+
+    .copyright{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .copyright p{
+        font-size: 2vw;
+    }
+
+    .copyright #all-rights-reserved {
+        order: 2;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    #footer-content {
+        padding: 15vw 5vw 0vw 5vw;
+    }
+
+    #outside-logo {
+        width: 40vw;
+    }
+
+    #footer-subscription-content h1{
+        width: 100%;
+        font-size: 9vw;
+        padding: 0 0 3vw 0;
+    }
+
+    #subscribe-container {
+        padding: 5vw 5vw;
+        font-size: 3.8vw;
+    }
+    
+    #subscribe-container i{
+        font-size: 5vw;
+    }
+
+    #contacts {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8vw 0;
+    }
+    
+    #contacts i{
+        font-size: 7.5vw;
+        margin-right: 0;
+        margin-left: 6vw;
+    }
+    
+    #contacts span{
+        font-size: 4.5vw;
+        font-weight: 700;
+    }
+
+    #footer-links-content {
+        font-size: 3.8vw;
+        padding: 16vw 0 12vw 0;
+    }
+    
+    #footer-links-content p {
+        width: 48%;
+        margin-bottom: 6vw;
+    }
+
+    .copyright p{
+        font-size: 3.5vw;
+        padding-top: 3vw;
+    }
+}
