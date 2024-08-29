@@ -12,18 +12,18 @@ p, h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
 
-/* Ancho de la scrollbar */
+/* Scrollbar width */
 body::-webkit-scrollbar {
     width: 4px;
 }
   
-/* Fondo de la scrollbar */
+/* Scrollbar background */
 body::-webkit-scrollbar-track {
     background: rgb(92, 92, 92);
 }
 
-/* Color de la barra de desplazamiento */
+/* Scroll bar color */
 body::-webkit-scrollbar-thumb {
-    background: #000000; /* Color del thumb */
-    border-radius: 10px; /* Bordes redondeados */
+    background: #000000;
+    border-radius: 10px;
   }
