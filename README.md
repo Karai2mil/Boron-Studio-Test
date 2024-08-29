@@ -1,6 +1,6 @@
 ## BORON STUDIO TEST
 
-Welcome to the first test for Boron Studio compañy! 
+Welcome to the first test for Boron Studio company! 
 
 ### To run this website, you must have downloaded and installed these three softwares and tools:
 
